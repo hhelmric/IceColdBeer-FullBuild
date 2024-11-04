@@ -193,41 +193,41 @@ def led_flash(led, delay):
 
         shiftpi.digitalWrite(led, shiftpi.LOW)
         shiftpi.delay(delay)
-#
-# def left_joystick():
-#     global left_dir
-#     while True:
-#         # Check if any of the joysticks are pressed
-#         if GPIO.input(left_joystick_up) == GPIO.LOW:
-#             # print('left joystick up')
-#             left_dir = 1
-#         if GPIO.input(left_joystick_down) == GPIO.LOW:
-#             # print('left joystick down')
-#             left_dir = -1
-#
-#         if GPIO.input(left_joystick_up) == GPIO.HIGH:
-#             # print('left joystick up')
-#             left_dir = 0
-#         if GPIO.input(left_joystick_down) == GPIO.HIGH:
-#             # print('left joystick down')
-#             left_dir = 0
-#
-# def right_joystick():
-#     global right_dir
-#     while True:
-#         if GPIO.input(right_joystick_up) == GPIO.LOW:
-#             # print('right joystick up')
-#             right_dir = 1
-#         if GPIO.input(right_joystick_down) == GPIO.LOW:
-#             # print('right joystick down')
-#             right_dir = -1
-#
-#         if GPIO.input(right_joystick_up) == GPIO.HIGH:
-#             # print('right joystick up')
-#             right_dir = 0
-#         if GPIO.input(right_joystick_down) == GPIO.HIGH:
-#             # print('right joystick down')
-#             right_dir = 0
+
+def left_joystick():
+    global left_dir
+    while True:
+        # Check if any of the joysticks are pressed
+        if GPIO.input(left_joystick_up) == GPIO.LOW:
+            # print('left joystick up')
+            left_dir = 1
+        if GPIO.input(left_joystick_down) == GPIO.LOW:
+            # print('left joystick down')
+            left_dir = -1
+
+        if GPIO.input(left_joystick_up) == GPIO.HIGH:
+            # print('left joystick up')
+            left_dir = 0
+        if GPIO.input(left_joystick_down) == GPIO.HIGH:
+            # print('left joystick down')
+            left_dir = 0
+
+def right_joystick():
+    global right_dir
+    while True:
+        if GPIO.input(right_joystick_up) == GPIO.LOW:
+            # print('right joystick up')
+            right_dir = 1
+        if GPIO.input(right_joystick_down) == GPIO.LOW:
+            # print('right joystick down')
+            right_dir = -1
+
+        if GPIO.input(right_joystick_up) == GPIO.HIGH:
+            # print('right joystick up')
+            right_dir = 0
+        if GPIO.input(right_joystick_down) == GPIO.HIGH:
+            # print('right joystick down')
+            right_dir = 0
 
 def game_play(targetHole):
     print("trying to get into hole: " + str(targetHole + 1) + "!")
